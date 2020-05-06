@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+//variables
+$body-background-color: #6495ED;
+$header-color:#FAEBD7;
+$content-background-color: #DEB887;
+$white: white;
+$black: black;
+
+@mixin links($color){
+    color: $color;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif; 
+}
+header{
+    background: $body-background-color;
+    margin:0;
+    padding: 30px;
+    text-align:right;
+    grid-area: header;
+    
+}
+header{
+        a{
+            &:link{
+                text-decoration: none;
+                @include links($header-color);
+            }  
+            &:visited{
+                @include links($header-color);
+        
+            }
+            &:active{
+                @include links($content-background-color);
+            }
+            &:hover{
+                @include links($white);
+                text-decoration: underline;
+            }
+        }
+} 
+h1, h2, h3, h4, h5, h6{
+font-family:  'Lora', 'Serif';
+}
+
+hr{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+li{
+    list-style: none;
+    margin:10px;
+}
+a{
+    &:link{
+        @include links($body-background-color);
+        text-decoration: none;
+    }
+    &:visited{
+        @include links($body-background-color);
+       text-decoration: none;
+    }
+    &:hover{
+       text-decoration: underline;
+    }
+}
+.post-content{
+                h2{
+                    a{
+                        &:link{
+                            color:$black;
+                        }
+                        &:visited{
+                            color:$black;
+                        }
+                        &:active{
+                            @include links($content-background-color);
+                        }
+                        &:hover{
+                            @include links($body-background-color);
+                    }
+                } 
+            }
+}         
+
+main{
+    background-color: $header-color;
+    margin: 0;
+    padding: 10px;
+    grid-area: main;
+}
+.post-date{
+    margin:10px;
+    color: #999;
+}
+article{
+    margin:10px;
+    margin-top:20px;
+    background: $white;
+    padding: 15px;
+    box-shadow: rgb(168, 162, 162) 3px 3px 3px;
+} 
+img{
+    text-align:center;
+    width: 90%;
+    margin-top:30px;
+}
+
+@media screen and (min-width: 700px){
+    body{
+        div{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin: 0 20px;
+            grid-template-areas: 'header main main main'
+                                 'header main main main'
+                                 'header main main main'   
+                                 'header main main main';   
+        }
+    } 
+    header{
+            ul{
+                li{
+                    font-size: 15px;
+                }
+            }
+        } 
+}

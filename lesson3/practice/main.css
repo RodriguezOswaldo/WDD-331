@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+  background: #6495ED;
+  margin: 0;
+  padding: 30px;
+  text-align: right;
+  grid-area: header;
+}
+
+header a:link {
+  text-decoration: none;
+  color: #FAEBD7;
+}
+header a:visited {
+  color: #FAEBD7;
+}
+header a:active {
+  color: #DEB887;
+}
+header a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora", "Serif";
+}
+
+hr {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+li {
+  list-style: none;
+  margin: 10px;
+}
+
+a:link {
+  color: #6495ED;
+  text-decoration: none;
+}
+a:visited {
+  color: #6495ED;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.post-content h2 a:link {
+  color: black;
+}
+.post-content h2 a:visited {
+  color: black;
+}
+.post-content h2 a:active {
+  color: #DEB887;
+}
+.post-content h2 a:hover {
+  color: #6495ED;
+}
+
+main {
+  background-color: #FAEBD7;
+  margin: 0;
+  padding: 10px;
+  grid-area: main;
+}
+
+.post-date {
+  margin: 10px;
+  color: #999;
+}
+
+article {
+  margin: 10px;
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  box-shadow: #a8a2a2 3px 3px 3px;
+}
+
+img {
+  text-align: center;
+  width: 90%;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 700px) {
+  body div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 20px;
+    grid-template-areas: "header main main main" "header main main main" "header main main main" "header main main main";
+  }
+
+  header ul li {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
