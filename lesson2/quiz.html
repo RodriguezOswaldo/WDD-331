@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+        label + input{
+              background: hotpink;
+          }
+        
+    
+    </style>
+</head>
+<body>
+    <form method="GET" action="/processor">
+        <h1>Buy Tickets to the Web Developer Gala </h1>
+        <p>Tickets are $10 each. Dinner packages are an extra $5. All fields are required.</p>
+        <fieldset title="fieldset1">
+            <legend>Tickets and Add-ons</legend>
+            <p>
+                <label for="quantity">Number of Tickets</label>
+                <span class="help">Limit 8</span>
+                <input type="number" value="1" name="quantity" id="quantity" step="1" min="1" max="8" required>
+        </p>
+            <p>
+                <label for="quantity">Dinner Packages</label>
+                <span class="help">Serves 2</span>
+                <input type="number" value="1" name="quantity" id="quantity" step="1" min="1" max="8">
+            </p>
+        </fieldset>
+        <fieldset title="fieldset2">
+            <legend>Payment</legend>
+            <p>
+                <label for="ccn">Credit card number</label>
+                <span class="help">No spaces or dashes, please.</span>
+                <input type="text" id="ccn" name="ccn" placeholder= "372000000000008" maxlength="16" size="16" required>
+            </p>
+            <p>
+                <label for="expiration">Expiration date</label>
+                <span class="help"><abbr title="Two-digit month">MM </abbr>/<abbr title="Four-digit Year">MM</abbr>YYYY</span>
+                <input type="text" id="expiration" name="expiration"  placeholder="01/2018" maxlength="7" size="7" required>
+            </p>
+        </fieldset>
+        <fieldset title="fieldset3">
+            <legend>Billing Address</legend>
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder= "ex: John Q. Public" size="40" required>
+            </p>
+            <p>
+                <label for="street_address">Street Address</label>
+                <input type="text" id="name" name="name" placeholder= "ex: 12345 Main Street, Apt 23" size="40">
+            </p>
+            <p>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder= "ex: Anytown">
+            </p>
+            <p>
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder= "CA" maxlength="2" pattern="[A-W]{2}" size="2">
+            </p>
+            <p>
+                <label for="zip">ZIP</label>
+                <input type="text" id="zip" name="zip" placeholder= "12345" maxlength="5" pattern="0-9{5}" size="5">
+            </p>
+        </fieldset>
+        <button type="submit">Buy Tickets!</button>
+
+    </form>
+</body>
+</html>

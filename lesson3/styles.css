@@ -1,0 +1,72 @@
+/* Global styles */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkred;
+}
+
+#contactform > {
+  background-color: burlywood;
+}
+#contactform > a:hover {
+  background-color: antiquewhite;
+}
+#contactform > input, #contactform > textarea {
+  background-color: antiquewhite;
+  flex: 2;
+}
+@media (min-width: 31em) {
+  #contactform > {
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 60em) {
+  #contactform > {
+    width: 70%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#contactform fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+#contactform fieldset > div label {
+  flex: 1;
+  text-align: left;
+}
+@media (min-width: 31em) {
+  #contactform fieldset > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  #contactform fieldset > div label {
+    text-align: right;
+    margin-right: 1em;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
