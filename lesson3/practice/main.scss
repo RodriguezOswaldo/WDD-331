@@ -23,23 +23,23 @@ header{
     
 }
 header{
-        a{
-            &:link{
-                text-decoration: none;
-                @include links($header-color);
-            }  
-            &:visited{
-                @include links($header-color);
-        
-            }
-            &:active{
-                @include links($content-background-color);
-            }
-            &:hover{
-                @include links($white);
-                text-decoration: underline;
-            }
+    a{
+        &:link{
+            text-decoration: none;
+            @include links($header-color);
+        }  
+        &:visited{
+            @include links($header-color);
+    
         }
+        &:active{
+            @include links($content-background-color);
+        }
+        &:hover{
+            @include links($white);
+            text-decoration: underline;
+        }
+    }
 } 
 h1, h2, h3, h4, h5, h6{
 font-family:  'Lora', 'Serif';
@@ -67,22 +67,22 @@ a{
     }
 }
 .post-content{
-                h2{
-                    a{
-                        &:link{
-                            color:$black;
-                        }
-                        &:visited{
-                            color:$black;
-                        }
-                        &:active{
-                            @include links($content-background-color);
-                        }
-                        &:hover{
-                            @include links($body-background-color);
-                    }
-                } 
+    h2{
+        a{
+            &:link{
+                color:$black;
             }
+            &:visited{
+                color:$black;
+            }
+            &:active{
+                @include links($content-background-color);
+            }
+            &:hover{
+                @include links($body-background-color);
+        }
+    } 
+}
 }         
 
 main{
@@ -121,10 +121,10 @@ img{
         }
     } 
     header{
-            ul{
-                li{
-                    font-size: 15px;
-                }
+        ul{
+            li{
+                font-size: 15px;
             }
-        } 
+        }
+    } 
 }
