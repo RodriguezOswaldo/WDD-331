@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS</title>
+    <style>
+    .flower{
+        width: 50px;
+        height: 50px;
+        background: red;
+        margin:20px;
+        border-radius: 50%/50%;
+    }
+    .flower:after,
+    .flower:before{
+        content:"";
+        position: absolute;
+        top:20px;
+        left:20px;
+        width:30px; 
+        height: 30px;
+        background: green;
+        border-radius: 50% 70% 70%/ 50% 70% 50% ;
+        z-index: -10;
+    }
+    .flower:before{
+        top:20px;
+        left:60px;
+        transform: rotateZ(90deg);
+    }
+    </style>
+</head>
+<body>
+    <div class="flower">
+    </div>
+    <div class="flowerDown"></div>
+</body>
+</html>

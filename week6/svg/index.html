@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG</title>
+    <style>
+        .svg{
+            opacity: 1;
+        }
+        .svg:hover{
+            background:#444;
+            animation-name: sg;
+            animation-duration:1s;
+            animation-iteration-count:infinite;
+            
+        }
+        @keyframes svg{
+            50%{
+            background: gray;
+            opacity: 0.5;
+            }
+            100%{
+            background: pink;
+            opacity: 1;
+            }
+            50%{
+            background: gray;
+            opacity: 0.5
+            }
+            
+            }
+        </style>
+        </head>
+        <body>
+        
+        <svg  class="svg" width="450" height="300">
+          <rect x="150" y="20" rx="70" ry="80"  width="250" height="150" style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.5;stroke-opacity:0.9" />
+          Sorry, your browser does not support inline SVG.  
+          <rect x="30" y="150" width="150" height="150"
+          style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+          <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+          <polyline points="0,40 80,40 40,80 80,120 120, 40 140, 40 0" style="fill:white;stroke:red;stroke-width:4" />
+          <!--Gradient 1-->
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+              <stop offset="50%" style="stop-color:rgb(25,255,0);stop-opacity:0.71" />
+              <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+          <text fill="#ffffff" font-size="45" font-family="Verdana" x="150" y="86">
+                SVG</text>
+        
+              
+            <!--Gradient 2-->
+          <defs>
+            <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="200" cy="170" rx="85" ry="55" fill="url(#grad2)" />
+          <text fill="#111" font-size="45" font-family="Verdana" x="170" y="186">
+                Yo</text>
+              
+        </svg>
+    
+</body>
+</html>

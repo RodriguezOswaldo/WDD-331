@@ -1,0 +1,83 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  border: 1px solid grey;
+  height: 56vw;
+  width: 40vw;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.card-front {
+  padding: 0.5em;
+}
+
+.icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.number {
+  text-align: center;
+  font-size: 4vw;
+}
+.number > .icon {
+  width: 4vw;
+  height: 4vw;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 50px repeat(3, 1fr) 50px;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 20px 10px;
+}
+
+.rotate {
+  grid-row-end: 6;
+  grid-column-end: 6;
+}
+
+.cell:nth-of-type(8) {
+  grid-row-end: 6;
+  grid-column-end: 5;
+}
+
+.cell:nth-of-type(7) {
+  grid-row-end: 6;
+  grid-column-end: 3;
+}
+
+.cell:nth-of-type(6) {
+  grid-row-end: 5;
+  grid-column-end: 5;
+}
+
+.cell:nth-of-type(5) {
+  grid-row-end: 5;
+  grid-column-end: 3;
+}
+
+.cell:nth-of-type(4) {
+  grid-column-end: 5;
+}
+
+.cell:nth-of-type(3) {
+  grid-row-end: 3;
+  grid-column-end: 4;
+  position: relative;
+  top: 60px;
+}
+
+/*# sourceMappingURL=styles.css.map */
