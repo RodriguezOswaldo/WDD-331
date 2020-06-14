@@ -1,0 +1,24 @@
+ html{
+     direction: ltr;
+ }
+ .container{
+    min-height: 600px;
+    display: flex;
+     /* flex-direction: row;
+    flex-wrap: wrap-reverse; */
+    /* for these last two properties together use flex-flow*/
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+    border: 2px dashed;
+ }
+ .box{
+    width:100px;
+    height:100px;
+    background:#eee;
+    border: 2px solid orangered;
+    font-size: 2em;
+    text-align: center;
+    justify-content: center;
+}
