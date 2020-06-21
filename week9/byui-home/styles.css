@@ -1221,7 +1221,7 @@ hr {
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "header header header" "name name name" "main main aside" "bottom-section bottom-section message" "bottom-section bottom-section message";
+    grid-template-areas: "header header header" "name name name" "main main aside" "bottom-section bottom-section message" "bottom-section bottom-section .";
   }
 
   .byui-name {
@@ -1277,9 +1277,12 @@ hr {
     text-align: center;
   }
 
+  hr {
+    display: none;
+  }
+
   .newsroom {
     display: flex;
-    flex: 6;
   }
 
   #information {

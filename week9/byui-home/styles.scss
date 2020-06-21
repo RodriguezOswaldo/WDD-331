@@ -201,14 +201,14 @@ hr{
 
   body{
     text-align: left;
-    @include margins( );
+    @include margins();
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:  'header header header'
                           'name name name'
                           'main main aside'
                           'bottom-section bottom-section message'
-                          'bottom-section bottom-section message';
+                          'bottom-section bottom-section .';
     }
     .byui-name{
       font-size: 2.2em;
@@ -252,10 +252,11 @@ hr{
     .updates{
       text-align: center;
     }
-
+    hr{
+      display: none;
+    }
     .newsroom{
       display: flex; 
-      flex:6; 
        }
     #information{
       width: 92%;
