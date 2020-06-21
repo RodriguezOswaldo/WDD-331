@@ -1,0 +1,275 @@
+@import 'typography';
+@import 'icons';
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+//mixins
+
+@mixin margins($left: auto, $right:auto){
+  margin-left: $left;
+  margin-right: $right;
+}
+@mixin img-width($max-width, $margin-bottom:1em, $border:none, $center:center){
+  max-width: $max-width;
+  margin-bottom: $margin-bottom;
+  border: $border; 
+  text-align: $center;
+}
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+} 
+body{
+  margin:0;
+  font-family: 'BYUI Open Sans'; 
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+}
+.site-banner{
+  background:$link-blue;
+  display: flex;
+  flex-flow: row wrap-reverse;
+  align-items: baseline;
+  padding:0.8em;
+  max-width: 100%;
+  color:$light-gray;
+}
+header{
+  margin-left:-16px;
+}
+.site-banner{
+  .site-banner__left{
+    a{
+      text-decoration: none;
+    }
+    .icon-byui-logo{
+      background:black;
+      color:white;
+      margin-left:0;
+      padding:0.5em;
+      font-size:2em;
+      text-decoration: none;
+    }
+}
+}
+.site-banner__right{
+  a{
+    text-decoration: none;
+  }
+  .icon-search, .icon-audience, .icon-menu{
+    color:white;
+    font-size:2em;
+  }
+}
+
+.byui-name{
+  background:$light-gray;
+  font-size:1.3em;
+  padding:0.1rem;
+  margin-bottom:2em;
+}
+.updates img{
+  @include img-width(90%);
+}
+.main-banner img{
+  @include img-width(87%, 2em);
+}
+form input{
+  max-width: 100%;
+}
+.box{
+  @include img-width(87%,1em, 1px solid $dark-gray,left );
+  @include margins();
+    span {
+      a{
+        text-decoration: none;
+        font-size: 1em;
+        text-align: right;
+    }
+  }
+}
+#information{
+  font-size: 1em;
+  width: 87%;
+  padding: 0.5em;
+  margin:1em;
+  position: relative;
+}
+ul{
+  @include img-width(97%,1em);
+  margin-left:-13px;
+  // @include margins( );
+  text-align: initial;
+  .title{
+    background:$dark-gray;
+    color:white;
+    font-weight: 600;
+    padding: 0.5em;
+    font-size: 1.3em;
+  }
+  .title2{
+    background: $byui-blue;
+  }
+  li{
+    display: flex;
+    list-style: none;
+    border: 1px solid $light-gray;
+    padding:0.5em;
+    .icon-angle-right{
+      font-size: 10px;
+      align-self: flex-end;
+    }
+    a{
+      text-decoration: none;
+      margin-left:10px;
+    }
+  }
+}
+.bottom-section{
+  text-align: left;
+  .newsroom{
+    @include img-width(87%,1em, none, left);
+    @include margins( );
+    border-bottom: 2px solid $light-gray;
+    label{
+      font-weight: bolder;
+    }
+    a{
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bolder;
+    }
+  }
+}
+.button{
+  font-size: 1em;
+  padding:0.4em 1.5em ;
+  background:$link-blue;
+  border-radius: 7px;
+  color:white;
+  position: relative;
+  left: 30%;   
+  margin-bottom:20px;
+  }
+hr{
+  margin:2em;
+}
+.university-message{
+    @include img-width(87%,0,2px solid $light-gray, center );
+    @include margins();      
+    border-radius: 2%;
+    div{
+      text-align: left;
+      background: $light-gray;
+      padding: 0.3em;
+      max-width: 100%;
+      border-radius: 2%;
+      font-weight: bolder;
+    }
+    img{
+      @include img-width(98%,0, none, center );
+      margin-top:5px;
+      }
+}
+
+@media (min-width: 700px){
+
+  body{
+    text-align: left;
+    @include margins( );
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:  'header header header'
+                          'name name name'
+                          'main main aside'
+                          'bottom-section bottom-section message'
+                          'bottom-section bottom-section message';
+    }
+    .byui-name{
+      font-size: 2.2em;
+    }
+    header{
+      grid-area: header;
+      font-size: 1.5em;
+    }
+    .byui-name{
+      grid-area:name;
+    }
+    main{
+      grid-area:main;
+    }
+    .main-banner{
+      margin-left:100px;
+    }
+    .main-banner img{
+      width: 130%;
+      margin-left:50px;
+    }
+    .boxes{
+      display: flex;
+      max-width: 90%;
+      margin-left: 100px;
+      .box{
+        width:350px;
+      }
+    }
+    aside{
+      grid-area:aside;
+      font-size: 1.8em;
+    }
+    .university-message{
+      grid-area:message;
+    }
+    .bottom-section{
+      grid-area:bottom-section;
+      font-size: 1.4em;
+    }
+    .updates{
+      text-align: center;
+    }
+
+    .newsroom{
+      display: flex; 
+      flex:6; 
+       }
+    #information{
+      width: 92%;
+    }
+    .newsroom img{
+      max-width: 250px;
+    }
+    .university-message{
+      width:100%;
+      font-size: 1.5em;
+      img{
+        width:90%;
+        
+      }
+    }
+}
+

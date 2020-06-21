@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'BYUI Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+    url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTQzyDMXhdD8sAj6OAJTFsBI.woff2)
+      format('woff2');
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+    url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff)
+      format('woff');
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+    url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTcDdSZkkecOE1hvV7ZHvhyU.ttf)
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'BYUI Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'),
+    url(https://fonts.gstatic.com/s/opensans/v13/TCmDhmS1RRL7aqhqZW19hwLUuEpTyoUstqEm5AMlJo4.woff2)
+      format('woff2');
+  src: local('Open Sans'), local('OpenSans'),
+    url(https://fonts.gstatic.com/s/opensans/v13/uYKcPVoh6c5R0NpdEY5A-Q.woff)
+      format('woff');
+  src: local('Open Sans'), local('OpenSans'),
+    url(https://fonts.gstatic.com/s/opensans/v13/yYRnAC2KygoXnEC8IdU0gQLUuEpTyoUstqEm5AMlJo4.ttf)
+      format('truetype');
+}
