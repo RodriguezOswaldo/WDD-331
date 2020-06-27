@@ -1,0 +1,38 @@
+.demo {
+  animation: setup 2s ease-out infinite,
+             dance 2s cubic-bezier(0, .8, .5, 1.5) infinite;
+  background: #3991AE;
+  color: #fff;
+  font-size: 6rem;
+  opacity: 0;
+  overflow: hidden;
+  padding: 2rem 4rem;
+  position: relative;
+  text-align: center;
+}
+
+@keyframes setup{
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+    transform: none;
+  }
+  100%{
+    opacity: 1;
+    transform: rotateZ(20deg);
+
+  }
+}
+@keyframes dance{
+  0%{
+    transform: rotateZ(20deg);
+  }
+  50%{
+    transform: rotateZ(-20deg);
+  }
+  100%{
+    transform: rotateZ(20deg);
+  }
+}
