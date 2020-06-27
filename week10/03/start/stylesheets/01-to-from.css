@@ -1,0 +1,19 @@
+.demo {
+  animation: fade-in 1s ease-out .5s forwards;
+  background: #3991AE;
+  color: #fff;
+  font-size: 6rem;
+  overflow: hidden;
+  padding: 2rem 4rem;
+  position: relative;
+  opacity: 0;
+  text-align: center;
+}
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
