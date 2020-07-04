@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #084;
+}
+.container{
+    height: 25vmin;
+    width: 25vmin;
+    background: teal;
+    box-shadow: 5px 5px 5px #222;
+    border-radius: 5%;
+}
+.container-one{
+    padding:1vmin;
+}
+.orbiting-circle{
+    height: 25%;
+    width: 25%;
+    background-color: darkred;
+    border-radius: 50%; 
+    animation: orbit 3s linear infinite;
+}
+@keyframes orbit{
+    0%{transform: translate(0,0);}
+    5%{transform: translate(0,0);}
+    25%{transform: translate(300%,0);}
+    30%{transform: translate(300%,0);}
+    50%{transform: translate(300%,300%);}
+    55%{transform: translate(300%,300%);}
+    75%{transform: translate(0,300%);}
+    80%{transform: translate(0,300%);}
+    100%{transform: translate(0,0);}
+}
+.container-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.morphing-circle{
+    height:25%;
+    width: 25%;
+    background-color: red;
+    border-radius: 50%;
+    animation: morphing-circle-square 3s linear infinite; 
+    } 
+/* .container-two:hover .morphing-circle{
+    border-radius: 0;
+    background-color: white;
+    transform: rotate(90deg);
+} */
+@keyframes morphing-circle-square{
+    0%{border-radius:50%;}
+    25%{
+        border-radius:50%;
+        background-color:darkred;
+    }
+    50%{
+        border-radius: 0%;
+        background-color:white;
+        transform: rotate(0deg);
+    }
+    75%{
+        border-radius: 0%;
+        background-color: white;
+        transform: rotate(90deg);
+        }
+    100%{
+        border-radius: 50%;
+        background-color: darkred;
+        transform: rotate(90deg);
+    }
+}
+.container-three{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.broken-circle{
+    height: 25%;
+    width:13%;
+    background: red;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    animation: break 3s ease-in-out 1.2s infinite;
+}
+.broken-circle2{
+    height: 25%;
+    width:13%;
+    background: red;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    /* animation: break 1.2s ease-in infinite 2s; */
+    animation: break2 3s ease-in-out 1.2s infinite;
+}
+/* .broken-circle::before{
+    position: absolute;
+    content:" ";
+    height: 50px;
+    width: 26px;
+    background: red;
+ 
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform: translateX(26px);
+
+    animation: break2 1.2s ease-in 1s infinite;
+    /* animation: break2 1s lr infinite 1s; 
+} */
+
+@keyframes break{
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(0px);
+    }
+    35%{
+        transform: translateX(-30px);
+    }
+    45%{
+        transform: translateX(-30px);
+    }
+    50%{
+        transform: translateX(-30px);
+    }
+    75%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+@keyframes break2{
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(0px);
+    }
+    35%{
+        transform: translateX(30px);
+    }
+    45%{
+        transform: translateX(30px);
+    }
+    50%{
+        transform: translateX(30px);
+    }
+    75%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+.container-four{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    height:25%;
+    width: 25%;
+    background-color: red;
+    border-radius: 50%;
+    animation: beat 1.8s linear 1.2s infinite;
+}
+
+@keyframes beat{
+    0%{
+        transform: scale(1);
+    }
+    5%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(1.2);
+    }
+   
+    14%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.2)
+    }
+    30%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+    80%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
